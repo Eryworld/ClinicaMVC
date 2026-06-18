@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Clínica</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+
+    <div class="d-flex">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <div class="logo text-center">
+                <h5>Sistema Clínica</h5>
+            </div>
+
+            <ul class="nav flex-column mt-4">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pacientes">
+                        Pacientes
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Medicos">
+                        Médicos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Citas">
+                        Citas
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Historial">
+                        Historial
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Usuarios">
+                        Usuarios
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="logout">
+                <a href="#" class="nav-link">
+                    Cerrar sesión
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Contenido -->
+        <div class="content">
+
+            <div class="topbar">
+
+                <div>
+                    <h4>@ViewData["Title"]</h4>
+                </div>
+
+                <div class="user-card">
+                    Administrador
+                </div>
+
+            </div>
+
+            @RenderBody()
+
+        </div>
+
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

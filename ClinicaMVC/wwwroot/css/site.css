@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background: #f5f6fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    background: #0f7a72;
+    color: white;
+    position: fixed;
+}
+
+.logo {
+    padding: 25px;
+    font-weight: bold;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 14px 25px;
+}
+
+    .sidebar .nav-link:hover {
+        background: rgba(255,255,255,.15);
+    }
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+/* Contenido */
+
+.content {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    padding: 25px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.user-card {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,.1);
+}
+
+/* Cards Dashboard */
+
+.dashboard-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.12);
+}
+
+    .dashboard-card h2 {
+        color: #0f7a72;
+        font-weight: bold;
+    }
