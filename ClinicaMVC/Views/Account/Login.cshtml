@@ -1,10 +1,12 @@
 ﻿@{
     Layout = null;
 }
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
 <form asp-controller="Account"
       asp-action="Login"
       method="post">
-
+    <div class="mb-3 position-absolute top-50 start-50 translate-middle">
     <div class="mb-3">
         <label class="form-label">Usuario</label>
         <input type="text"
@@ -22,5 +24,5 @@
     <button type="submit" class="btn btn-success w-100">
         Iniciar Sesión
     </button>
-
+    </div>
 </form>
