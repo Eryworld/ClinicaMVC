@@ -1,23 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using ClinicaMVC.Data;
+using Microsoft.EntityFrameworkCore;
 namespace ClinicaMVC.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly ClinicaDbContext _context;
+
+        public AccountController(ClinicaDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
-
         [HttpPost]
         public IActionResult Login(string usuario, string password)
         {
-            // Temporal para pruebas
+            var user = _context.Usuarios
+                .FirstOrDefault(u =>
+                    u.NombreUsuario == usuario &&
+                    u.Clave == password &&
+                    u.Activo == true);
 
-            if (usuario == "admin" && password == "1234")
+            if (user != null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Dashboard", "Home");
             }
 
             ViewBag.Error = "Usuario o contraseña incorrectos";

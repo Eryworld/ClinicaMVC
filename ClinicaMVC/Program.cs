@@ -1,4 +1,11 @@
+using ClinicaMVC.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+//Building the connection to DB
+builder.Services.AddDbContext<ClinicaDbContext>(options =>
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("ClinicaConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
